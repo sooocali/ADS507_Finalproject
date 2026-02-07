@@ -3,13 +3,19 @@ services:
     image: mysql:8.0
     container_name: ads507-mysql
     restart: unless-stopped
+
+    
+    command: --local-infile=1
+
     environment:
       MYSQL_ROOT_PASSWORD: rootpass
       MYSQL_DATABASE: ads507
       MYSQL_USER: appuser
       MYSQL_PASSWORD: apppass
+
     ports:
       - "3307:3306"
+
     volumes:
       - mysql_data:/var/lib/mysql
       - ./data:/data
