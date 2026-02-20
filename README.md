@@ -51,6 +51,12 @@ Install dependencies:
 Start MySQL via Docker (example):
     docker run --name mysql-etl -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 -d mysql:latest
 
+📊 Data Source
+The MetroPT3 compressor dataset was obtained from:
+https://archive.ics.uci.edu/dataset/791/metropt+3+dataset
+
+The dataset contains structured CSV sensor data representing compressor performance metrics. It was used to simulate a real world incremental ingestion workflow.
+
 🚀 Usage
 Run the notebook cells sequentially:
 1.Connect to MySQL
