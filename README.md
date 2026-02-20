@@ -75,25 +75,30 @@ The dataset contains structured CSV sensor data representing compressor performa
 
 ---
 
-## 🚀 Usage
+🚀 Usage
 
 Run the notebook cells sequentially:
 
-1. **Connect to MySQL**  
-2. **Reset schema**
-3. **Initialize watermark ** 
-4. **Run incremental ETL**
-5. **View monitoring dashboard**
+Connect to MySQL
 
-**The pipeline will:**
-- Insert only new data  
-- Avoid duplicate processing  
-- Maintain ingestion state  
+Reset schema
 
----
+Initialize watermark
 
-## 👤 Author
+Run incremental ETL
 
-**Caly Nguyen**  
+View monitoring dashboard
+
+The pipeline will:
+
+Insert only new data
+
+Avoid duplicate processing
+
+Maintain ingestion state
+
+👤 Author
+
+Caly Nguyen
 Graduate student focused on data science, data engineering, and machine learning systems.
 Initially, I thought SQL could not create “real” programs. This project showed me that SQL is more than writing queries — it can support reliable pipelines when combined with thoughtful system design.
