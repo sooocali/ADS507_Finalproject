@@ -80,16 +80,16 @@ docker run --name mysql-etl \
 ## 🚀 Usage
 
 Run the notebook cells sequentially:
-1. - Connect to MySQL
-2. - Reset schema
-3. - Initialize watermark
-4. - incremental ETL
-5. - View monitoring dashboard
+1. Connect to MySQL
+2. Reset schema
+3. Initialize watermark
+4. incremental ETL
+5. View monitoring dashboard
 
 The pipeline will:
--Insert only new data
--Avoid duplicate processing
--Maintain ingestion state
+- Insert only new data
+- Avoid duplicate processing
+- Maintain ingestion state
 
 ## 👤 Author
 
