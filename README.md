@@ -57,21 +57,33 @@ The system is designed to run against a Dockerized MySQL instance for reproducib
 - pandas
 - PyMySQL
 
-### Install dependencies
-```bash
-pip install pandas sqlalchemy pymysql
-
-docker run --name mysql-etl \
-  -e MYSQL_ROOT_PASSWORD=password \
-  -p 3306:3306 \
-  -d mysql:latest
-
 ## 📊 Data Source
 
 The MetroPT3 compressor dataset was obtained from:  
 https://archive.ics.uci.edu/dataset/791/metropt3+dataset
 
 The dataset contains structured CSV sensor data representing compressor performance metrics. It was used to simulate a real-world incremental ingestion workflow.
+
+---
+
+## ⬇️ Installation
+
+### Requirements
+- Python 3.9+
+- MySQL (Docker recommended)
+- SQLAlchemy
+- pandas
+- PyMySQL
+
+### Install Dependencies
+```bash
+pip install pandas sqlalchemy pymysql
+
+
+docker run --name mysql-etl \
+  -e MYSQL_ROOT_PASSWORD=password \
+  -p 3306:3306 \
+  -d mysql:latest
 
 ---
 
@@ -101,4 +113,5 @@ Maintain ingestion state
 
 Caly Nguyen
 Graduate student focused on data science, data engineering, and machine learning systems.
-Initially, I thought SQL could not create “real” programs. This project showed me that SQL is more than writing queries — it can support reliable pipelines when combined with thoughtful system design.
+
+Initially, I thought SQL could not create “real” programs. This project showed me that SQL is more than writing queries. The language can support reliable pipelines when combined with thoughtful system design.
