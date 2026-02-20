@@ -48,15 +48,6 @@ The system is designed to run against a Dockerized MySQL instance for reproducib
 
 ---
 
-## ⬇️ Installation
-
-### Requirements
-- Python 3.9+
-- MySQL (Docker recommended)
-- SQLAlchemy
-- pandas
-- PyMySQL
-
 ## 📊 Data Source
 
 The MetroPT3 compressor dataset was obtained from:  
@@ -79,39 +70,29 @@ The dataset contains structured CSV sensor data representing compressor performa
 ```bash
 pip install pandas sqlalchemy pymysql
 
-
 docker run --name mysql-etl \
   -e MYSQL_ROOT_PASSWORD=password \
   -p 3306:3306 \
   -d mysql:latest
-
+```
 ---
 
-🚀 Usage
+## 🚀 Usage
 
 Run the notebook cells sequentially:
-
-Connect to MySQL
-
-Reset schema
-
-Initialize watermark
-
-Run incremental ETL
-
-View monitoring dashboard
+1. - Connect to MySQL
+2. - Reset schema
+3. - Initialize watermark
+4. - incremental ETL
+5. - View monitoring dashboard
 
 The pipeline will:
+-Insert only new data
+-Avoid duplicate processing
+-Maintain ingestion state
 
-Insert only new data
-
-Avoid duplicate processing
-
-Maintain ingestion state
-
-👤 Author
+## 👤 Author
 
 Caly Nguyen
 Graduate student focused on data science, data engineering, and machine learning systems.
-
 Initially, I thought SQL could not create “real” programs. This project showed me that SQL is more than writing queries. The language can support reliable pipelines when combined with thoughtful system design.
